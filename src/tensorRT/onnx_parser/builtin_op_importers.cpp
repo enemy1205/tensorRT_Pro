@@ -4714,10 +4714,8 @@ std::vector<nvinfer1::PluginField> loadFields(string_map<std::vector<uint8_t>>& 
                 break;
             }
             case ::onnx::AttributeProto::UNDEFINED:
-            case ::onnx::AttributeProto::SPARSE_TENSOR:
             case ::onnx::AttributeProto::GRAPH:
             case ::onnx::AttributeProto::TENSORS:
-            case ::onnx::AttributeProto::SPARSE_TENSORS:
             case ::onnx::AttributeProto::GRAPHS:
                 MAKE_ERROR(
                     "Attributes of type: " + ::onnx::AttributeProto::AttributeType_Name(attrs.type(fieldName))
